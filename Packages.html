@@ -13,7 +13,6 @@
       color: #2b2b2b;
     }
 
-  
     header {
       background: #063b2d;
       padding: 15px 50px;
@@ -26,7 +25,7 @@
     header nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 25px;
+      margin-left: 20px;
       font-weight: 500;
     }
 
@@ -47,7 +46,6 @@
     h1 {
       text-align: center;
       font-size: 36px;
-      margin-bottom: 10px;
     }
 
     .subtitle {
@@ -69,8 +67,8 @@
     .planner-form label {
       font-size: 14px;
       font-weight: 600;
-      margin-bottom: 6px;
       display: block;
+      margin-bottom: 6px;
     }
 
     .planner-form select,
@@ -79,7 +77,6 @@
       padding: 10px;
       border-radius: 8px;
       border: 1px solid #ccc;
-      font-size: 14px;
     }
 
     .form-actions {
@@ -94,9 +91,15 @@
       padding: 14px 26px;
       border-radius: 8px;
       border: none;
-      font-size: 15px;
       cursor: pointer;
       font-weight: bold;
+    }
+
+    .btn-primary:hover,
+    .quote-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      transition: 0.2s;
     }
 
     .itinerary {
@@ -137,7 +140,6 @@
     .price {
       font-size: 22px;
       font-weight: bold;
-      margin-bottom: 6px;
     }
 
     .quote-btn {
@@ -152,7 +154,6 @@
       cursor: pointer;
     }
 
-
     @media (max-width: 900px) {
       .planner-form,
       .itinerary {
@@ -166,12 +167,12 @@
 <header>
   <strong>GAONE ADVENTURES</strong>
   <nav>
-    Home
-    Packages
-    Trip Planner
-    About
-    Contact
-    Plan My Trip
+    <a href="#">Home</a>
+    <a href="#">Packages</a>
+    <a href="#">Trip Planner</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#" class="cta-btn">Plan My Trip</a>
   </nav>
 </header>
 
@@ -180,10 +181,10 @@
   <h1>Plan Your Botswana Trip</h1>
   <p class="subtitle">Tell us your preferences and get a custom itinerary in minutes.</p>
 
-  <section class="planner-form">
+  <form class="planner-form">
     <div>
       <label>Destination</label>
-      <select>
+      <select id="destination">
         <option>Okavango Delta</option>
         <option>Chobe National Park</option>
         <option>Moremi Game Reserve</option>
@@ -192,7 +193,7 @@
 
     <div>
       <label>Travel Dates</label>
-      <input type="text" placeholder="20 Jun 2025 – 27 Jun 2025"/>
+      <input type="date">
     </div>
 
     <div>
@@ -222,48 +223,59 @@
     </div>
 
     <div class="form-actions">
-      <button class="btn-primary">Generate My Trip Plan</button>
+      <button type="button" class="btn-primary">Generate My Trip Plan</button>
     </div>
-  </section>
+  </form>
 
   <section class="itinerary">
     <div>
-      <h3>Your Suggested Itinerary</h3>
-      <ul class="days">
+      <h3 id="itinerary-title">Your Suggested Itinerary</h3>
+      <ul class="days" id="itinerary-list">
         <li>
           <div class="day-title">Day 1 – Arrival in Maun</div>
           Meet & greet and transfer to your lodge.
-        </li>
-        <li>
-          <div class="day-title">Day 2–3 – Okavango Delta</div>
-          Mokoro excursions, game drives, wildlife viewing.
-        </li>
-        <li>
-          <div class="day-title">Day 4 – Moremi Game Reserve</div>
-          Nature walks and big game safaris.
-        </li>
-        <li>
-          <div class="day-title">Day 5 – Chobe National Park</div>
-          Boat cruise and sunset safari.
-        </li>
-        <li>
-          <div class="day-title">Day 6 – Departure</div>
-          Transfer to airport.
         </li>
       </ul>
     </div>
 
     <div>
-      https://images.unsplash.com/photo-1609947017188-75a12c73fa3d?auto=format&fit=crop&w=900&q=80
+      <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=80" alt="Safari">
+
       <div class="price-box">
         <div class="price">P22,000 – P36,000</div>
-        <small>Estimated cost per person (subject to availability).</small>
+        <small>Estimated cost per person.</small>
         <button class="quote-btn">Get Final Quote</button>
       </div>
     </div>
   </section>
 
 </div>
+
+<script>
+  const button = document.querySelector('.btn-primary');
+  const title = document.getElementById('itinerary-title');
+  const list = document.getElementById('itinerary-list');
+  const destination = document.getElementById('destination');
+
+  button.addEventListener('click', () => {
+    button.textContent = "Generating...";
+
+    setTimeout(() => {
+      const dest = destination.value;
+
+      title.textContent = "Your " + dest + " Itinerary";
+
+      list.innerHTML = `
+        <li><div class="day-title">Day 1</div>Arrival and hotel check-in</li>
+        <li><div class="day-title">Day 2</div>Safari and wildlife viewing</li>
+        <li><div class="day-title">Day 3</div>Guided tours and relaxation</li>
+        <li><div class="day-title">Day 4</div>Departure</li>
+      `;
+
+      button.textContent = "Generate My Trip Plan";
+    }, 1200);
+  });
+</script>
 
 </body>
 </html>
