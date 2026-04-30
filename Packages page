@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trip Planner | Gaone Adventures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f6f4;
+      color: #2b2b2b;
+    }
+
+    /* NAVBAR */
+    header {
+      background: #063b2d;
+      padding: 15px 50px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+    }
+
+    .cta-btn {
+      background: #d89c2c;
+      padding: 10px 18px;
+      border-radius: 6px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* PAGE */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    /* FORM */
+    .planner-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .planner-form label {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .planner-form select,
+    .planner-form input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .form-actions {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      background: #063b2d;
+      color: #fff;
+      padding: 14px 26px;
+      border-radius: 8px;
+      border: none;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* ITINERARY */
+    .itinerary {
+      margin-top: 50px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+    }
+
+    .days li {
+      list-style: none;
+      margin-bottom: 15px;
+    }
+
+    .day-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .itinerary img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .price-box {
+      margin-top: 20px;
+      background: #f2f4f1;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .quote-btn {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #063b2d;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .planner-form,
+      .itinerary {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <strong>GAONE ADVENTURES</strong>
+  <nav>
+    Home
+    Packages
+    Trip Planner
+    About
+    Contact
+    Plan My Trip
+  </nav>
+</header>
+
+<div class="container">
+
+  <h1>Plan Your Botswana Trip</h1>
+  <p class="subtitle">Tell us your preferences and get a custom itinerary in minutes.</p>
+
+  <section class="planner-form">
+    <div>
+      <label>Destination</label>
+      <select>
+        <option>Okavango Delta</option>
+        <option>Chobe National Park</option>
+        <option>Moremi Game Reserve</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Travel Dates</label>
+      <input type="text" placeholder="20 Jun 2025 – 27 Jun 2025"/>
+    </div>
+
+    <div>
+      <label>Budget Range</label>
+      <select>
+        <option>Mid-range</option>
+        <option>Luxury</option>
+        <option>Budget</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Travel Style</label>
+      <select>
+        <option>Adventure & Wildlife</option>
+        <option>Luxury Safari</option>
+        <option>Family Friendly</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Travelers</label>
+      <select>
+        <option>2 Adults</option>
+        <option>Family (4)</option>
+      </select>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn-primary">Generate My Trip Plan</button>
+    </div>
+  </section>
+
+  <section class="itinerary">
+    <div>
+      <h3>Your Suggested Itinerary</h3>
+      <ul class="days">
+        <li>
+          <div class="day-title">Day 1 – Arrival in Maun</div>
+          Meet & greet and transfer to your lodge.
+        </li>
+        <li>
+          <div class="day-title">Day 2–3 – Okavango Delta</div>
+          Mokoro excursions, game drives, wildlife viewing.
+        </li>
+        <li>
+          <div class="day-title">Day 4 – Moremi Game Reserve</div>
+          Nature walks and big game safaris.
+        </li>
+        <li>
+          <div class="day-title">Day 5 – Chobe National Park</div>
+          Boat cruise and sunset safari.
+        </li>
+        <li>
+          <div class="day-title">Day 6 – Departure</div>
+          Transfer to airport.
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      https://images.unsplash.com/photo-1609947017188-75a12c73fa3d?auto=format&fit=crop&w=900&q=80
+      <div class="price-box">
+        <div class="price">P22,000 – P36,000</div>
+        <small>Estimated cost per person (subject to availability).</small>
+        <button class="quote-btn">Get Final Quote</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
