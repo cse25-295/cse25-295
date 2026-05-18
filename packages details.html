@@ -10,67 +10,75 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">GAONE ADVENTURES</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="planner.html">Trip Planner</a></li>
-                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><strong>GAONE ADVENTURES</strong></a>
+        <div class="navbar-nav ms-auto d-flex align-items-center">
+            <a class="nav-link mx-3" href="index.html">Home</a>
+            <a class="nav-link mx-3" href="packages.html">Packages</a>
+            <a class="nav-link mx-3" href="planner.html">Trip Planner</a>
+            <a class="nav-link mx-3" href="about.html">About Us</a>
+            <a class="nav-link mx-3" href="contact.html">Contact</a>
+            <a href="planner.html" class="btn btn-warning ms-3">Plan My Trip</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <section class="py-5 mt-5">
-        <div class="container">
-            <h1 class="mb-2">Luxury Safari Escape</h1>
-            <p class="lead">
-                <i class="fas fa-clock"></i> 6 Days / 5 Nights &nbsp;&nbsp; 
-                <span class="badge bg-warning">Luxury</span>
-            </p>
-            <h3 class="text-success">From P32,000 per person</h3>
+<div class="container mt-5 pt-5">
+    <h1 class="mb-1">Luxury Safari Escape</h1>
+    <p>
+        <i class="fas fa-clock"></i> 6 Days / 5 Nights &nbsp;&nbsp;
+        <i class="fas fa-star text-warning"></i> Luxury
+    </p>
+    <h3 class="text-success">From P32,000 per person</h3>
 
-            <img src="https://images.unsplash.com/photo-1587825140708-d5d7c8e8e8e8" 
-                 class="img-fluid rounded-4 my-4 shadow" style="height: 450px; object-fit: cover; width: 100%;" alt="Luxury Safari">
+    <img src="https://picsum.photos/id/1015/1400/600" class="img-fluid rounded-4 my-4" alt="Luxury Safari" style="height: 500px; object-fit: cover;">
 
-            <div class="row">
-                <div class="col-lg-8">
-                    <h4>Overview</h4>
-                    <p>This luxury safari takes you through the best of Botswana with premium lodges, private transfers, and unforgettable experiences.</p>
+    <!-- Tabs -->
+    <ul class="nav nav-tabs mb-4">
+        <li class="nav-item"><a class="nav-link active" href="#">Overview</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Itinerary</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">What's Included</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">What's Excluded</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Accommodation</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <h4>Overview</h4>
+            <p>This luxury safari takes you through the best of Botswana with premium lodges, private transfers, and unforgettable experiences in the heart of Botswana.</p>
+            
+            <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check text-success"></i> Private game drives</li>
+                <li class="mb-2"><i class="fas fa-check text-success"></i> Premium lodges</li>
+                <li class="mb-2"><i class="fas fa-check text-success"></i> All meals included</li>
+                <li class="mb-2"><i class="fas fa-check text-success"></i> Expert local guides</li>
+            </ul>
+        </div>
+
+        <!-- Price Sidebar -->
+        <div class="col-lg-4">
+            <div class="card shadow sticky-top" style="top: 100px;">
+                <div class="card-body">
+                    <h5>Price Guide (per person)</h5>
+                    <hr>
+                    <p><strong>Low Season</strong><br>P28,000</p>
+                    <p><strong>High Season</strong><br>P36,000</p>
+                    <small class="text-muted">Price varies based on season and availability.</small>
                     
-                    <ul class="list-group mb-4">
-                        <li class="list-group-item">✅ Private game drives</li>
-                        <li class="list-group-item">✅ Premium lodges</li>
-                        <li class="list-group-item">✅ All meals included</li>
-                        <li class="list-group-item">✅ Expert local guides</li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h5>Price Guide (per person)</h5>
-                            <hr>
-                            <p><strong>Low Season:</strong> P28,000</p>
-                            <p><strong>High Season:</strong> P36,000</p>
-                            <button onclick="bookNow()" class="btn btn-dark w-100 mt-4">
-                                Book This Trip →
-                            </button>
-                        </div>
-                    </div>
+                    <button onclick="bookNow()" class="btn btn-dark w-100 mt-4 py-3">
+                        Book This Trip →
+                    </button>
+                    <button onclick="bookNow()" class="btn btn-outline-dark w-100 mt-3">
+                        Customize This Trip
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
