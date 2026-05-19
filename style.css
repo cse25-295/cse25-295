@@ -19,11 +19,20 @@ body {
 }
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
-                url('"C:\Users\Kgotla Gaone Rakgomo\OneDrive - Botswana Accountancy College\Documents\java\cover.jpg")
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url('cover.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
     min-height: 650px;
+
     display: flex;
     align-items: center;
+
     color: white;
 }
 
