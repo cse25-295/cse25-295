@@ -29,7 +29,7 @@ body {
 /* Hero Section */
 .hero {
     background-image: 
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.38)),
         url("https://raw.githubusercontent.com/cse25-295/cse25-295/main/Images/cover.jpg");
     
     background-size: cover;
