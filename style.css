@@ -19,9 +19,8 @@ body {
 }
 
 .hero {
-    background:
-       background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url("https://raw.githubusercontent.com/cse25-295/cse25-295/main/Images/cover.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("https://raw.githubusercontent.com/cse25-295/cse25-295/main/Images/cover.jpg");
 
     background-size: cover;
     background-position: center;
