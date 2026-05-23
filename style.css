@@ -21,7 +21,7 @@ body {
 .hero {
     background:
         linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url('cover.jpg');
+        url('https://github.com/cse25-295/cse25-295/blob/main/Images/cover.jpg');
 
     background-size: cover;
     background-position: center;
