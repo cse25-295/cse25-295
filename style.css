@@ -44,7 +44,7 @@ body {
     position: relative;
 }
 
-/* Fix for your buttons */
+/* Fixing my buttons */
 .btn-plan {
     background-color: var(--accent);
     color: white;
